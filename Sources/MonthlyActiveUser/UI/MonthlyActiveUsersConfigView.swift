@@ -39,13 +39,15 @@ struct MonthlyActiveUsersConfigView: View {
                     }
                 }
             }
-            .navigationBarItems(trailing: HStack {
-                Button {
-                    onSave(config)
-                } label: {
-                    Text("Save")
+            .toolbar {
+                ToolbarItemGroup(placement: .primaryAction) {
+                    Button {
+                        onSave(config)
+                    } label: {
+                        Text("Save")
+                    }
                 }
-            })
+            }
         }
     }
 }

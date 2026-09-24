@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "AmplitudeWidget",
     platforms: [
-        .iOS("16.0")
+        .iOS(.v16),
+        .macOS(.v13)
     ],
     products: [
         .library(
@@ -15,7 +16,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/hartakji/daashi-widget-foundation", from: "1.0.0")
+        .package(url: "https://github.com/hartakji/daashi-widget-foundation", from: "1.1.0")
     ],
     targets: [
         .target(
